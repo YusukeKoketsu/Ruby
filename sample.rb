@@ -18,3 +18,24 @@ puts "WEBCAMPでプログラミング学習".include?("WEBCAMP")
 
 # methodsは使用可能なメソッド一覧を表示できるメソッドです。
 # puts 'こんにちは'.methods
+
+# 再代入
+webcamp = 'プログラミング学習'
+puts webcamp
+
+webcamp = 'オンラインプログラミング学習'
+puts webcamp
+
+# 大文字で始まる場合は、「定数」と呼ばれ、定数は後から書き換えることができない
+# Pi = 3.14
+# puts Pi
+
+# Pi = 100
+# puts Pi
+
+# 変数展開は元の変数がどのような型であっても文字列型に変換くれる "#{変数}" ダブルクォーテーションで括った場合のみ機能
+name = '纐纈'
+weight = 70
+puts name + 'の体重は' + weight.to_s + 'kgです。'
+# +による連結に比べてコード量が減り、変数の型を気にしなくていい
+puts "#{name}の体重は#{weight}kgです。"
