@@ -1,3 +1,4 @@
+# 自分で好きな数字を入力する
 def fizz_buzz(number)
   if number % 15 == 0
     "FizzBuzz"
