@@ -92,3 +92,37 @@ end
 
 # 引数を渡してメソッドを呼び出してください
 introduce("koketsu")
+
+def print_info(item, price)
+  puts "わんこでんきへようこそ！"
+  puts "今日は#{item}がセール中で#{price}円です！"
+end
+
+# print_infoメソッドを呼び出してください
+print_info("SDカード", 1200)
+
+def discount(price)
+  # 「price / 2」を戻り値として返してください
+	return price / 2
+end
+
+puts "テレビがセール中です！"
+
+# discountメソッドを呼び出し、その戻り値を変数half_priceに代入してください
+half_price = discount(15000)
+
+# 変数half_priceを用いて、「特別価格で〇〇円です」となるように出力してください
+puts "特別価格で#{half_price}円です"
+
+# shipping_free?メソッドを定義してください
+def shipping_free?(price)
+	return price >= 5000
+end
+
+# 真偽値を返すメソッドは、メソッド名の末尾に「?」をつける
+# if文の条件式でshipping_free?メソッドを呼び出してください
+if shipping_free?(3000)
+	puts "5000円以上のお買い上げなので送料はいただきません"
+else
+	puts "追加で送料をいただきます"
+end
