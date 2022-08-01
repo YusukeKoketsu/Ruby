@@ -18,6 +18,20 @@ class Menu
     if count >= 3
       total_price -= 100
     end
+
+    # 今日が日曜日ならば、100円割引
+    if count >= 1 && Menu.is_discount_day?
+      total_price -= 100
+    end
+
     return total_price
   end
+
+  # 今日は日曜日ですか?
+  def Menu.is_discount_day?
+    today = Date.today
+    return today.sunday?
+  end
+
+
 end
